@@ -24,8 +24,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-      body:  Padding(
+      backgroundColor: Colors.white,
+      body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: ListView(
           children: [
@@ -34,13 +34,15 @@ class _HomePageState extends State<HomePage> {
               child: SizedBox(
                 height: 40,
                 child: Row(
-
                   children: const [
                     SizedBox(
                       child: Text('Hey, Welcome back'),
                     ),
                     Spacer(),
-                    Icon(Icons.waving_hand_outlined, color: Colors.amber,),
+                    Icon(
+                      Icons.waving_hand_outlined,
+                      color: Colors.amber,
+                    ),
                   ],
                 ),
               ),
@@ -61,35 +63,33 @@ class _HomePageState extends State<HomePage> {
             Card(
                 elevation: 5,
                 shape: RoundedRectangleBorder(
-                  borderRadius:
-                  BorderRadius.circular(15.0),
+                  borderRadius: BorderRadius.circular(15.0),
                   side: const BorderSide(
                     color: Colors.black12,
                   ),
                 ),
-
                 child: Container(
                     padding: const EdgeInsets.all(10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-
                       children: [
                         Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
-
                               Container(
                                 width: 100.0,
                                 height: 100.0,
-                                decoration:   BoxDecoration(
+                                decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    image:  DecorationImage(
+                                    image: DecorationImage(
                                         fit: BoxFit.fill,
-                                        image: NetworkImage("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_15221647_imag-of-heart-in-the-blue-sky-against-a-background-of-white-clouds.html&psig=AOvVaw0rrtvlJk1BElUkd9j-hXt8&ust=1692796830740000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPj9_9-t8IADFQAAAAAdAAAAABAE")
-                                    )
-                                ),),
-                              SizedBox(width: 10,),
+                                        image: NetworkImage(
+                                            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_15221647_imag-of-heart-in-the-blue-sky-against-a-background-of-white-clouds.html&psig=AOvVaw0rrtvlJk1BElUkd9j-hXt8&ust=1692796830740000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPj9_9-t8IADFQAAAAAdAAAAABAE"))),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
 
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -99,18 +99,19 @@ class _HomePageState extends State<HomePage> {
                                     children: [
                                       Text('Name: '),
                                       Text('----:'),
-                                      SizedBox(width: 70,),
+                                      SizedBox(
+                                        width: 70,
+                                      ),
 
                                       //  Spacer(),
                                       IconButton(
                                         iconSize: 28,
                                         icon: const Icon(Icons.favorite_border),
-                                        color:Colors.grey,
+                                        color: Colors.grey,
                                         onPressed: () {
                                           // ...
                                         },
                                       ),
-
                                     ],
                                   ),
                                   Row(
@@ -120,7 +121,6 @@ class _HomePageState extends State<HomePage> {
                                     ],
                                   ),
                                   Text('un:'),
-
                                 ],
                               )
                               // Container(
@@ -146,34 +146,27 @@ class _HomePageState extends State<HomePage> {
                               //     ),
                               //   ),
                               // ),
-
-                            ]
+                            ]),
+                        SizedBox(
+                          height: 10,
                         ),
-                        SizedBox(height: 10,),
                         Text('Share Dascription:'),
-                        SizedBox(height: 5,),
+                        SizedBox(
+                          height: 5,
+                        ),
                         Text('Hello wourld'),
-                        SizedBox(height: 10,),
-
+                        SizedBox(
+                          height: 10,
+                        ),
                       ],
-
-                    )
-
-
-                )
-
-            ),
+                    ))),
 
             //No items to show now.
             //Please add favorite items to see here.
-
-
-
-
           ],
         ),
       ),
-      bottomNavigationBar:  Row(
+      bottomNavigationBar: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
@@ -182,22 +175,18 @@ class _HomePageState extends State<HomePage> {
               style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor: Colors.black,
-                  padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 15),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 70, vertical: 15),
                   textStyle: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold)
-              ),
+                      fontSize: 14, fontWeight: FontWeight.bold)),
               onPressed: () {
-
-
                 Get.to(
-                      () => const FavoriteItemsPage(),
+                  () => const FavoriteItemsPage(),
                 );
               },
               child: const Text('Add Favorite Items'),
             ),
           ),
-
         ],
       ),
     );

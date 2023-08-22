@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
- part 'user_data.g.dart';
+part 'user_data.g.dart';
 
 @JsonSerializable()
 class UserData {
@@ -20,12 +20,10 @@ class UserData {
         meta: meta ?? this.meta,
       );
 
-
   factory UserData.fromJson(Map<String, dynamic> json) =>
       _$UserDataFromJson(json);
 
   Map<String, dynamic> toJson() => _$UserDataToJson(this);
-
 }
 
 @JsonSerializable()
@@ -118,7 +116,7 @@ class Configuration {
   bool? itemTimestamp;
   bool? emojiVoting;
   dynamic defaultSort;
- dynamic defaultLayout;
+  dynamic defaultLayout;
 
   Configuration({
     this.isModerated,
@@ -170,15 +168,9 @@ class Configuration {
   Map<String, dynamic> toJson() => _$ConfigurationToJson(this);
 }
 
-enum DefaultLayout {
-  FULL,
-  MAGAZINE
-}
+enum DefaultLayout { FULL, MAGAZINE }
 
-
-enum DefaultSort {
-  CROWDRANK
-}
+enum DefaultSort { CROWDRANK }
 
 @JsonSerializable()
 class Owner {
@@ -227,8 +219,7 @@ class Owner {
         headline: headline ?? this.headline,
       );
 
-  factory Owner.fromJson(Map<String, dynamic> json) =>
-      _$OwnerFromJson(json);
+  factory Owner.fromJson(Map<String, dynamic> json) => _$OwnerFromJson(json);
 
   Map<String, dynamic> toJson() => _$OwnerToJson(this);
 }
@@ -297,9 +288,7 @@ class Status {
         hasPro: hasPro ?? this.hasPro,
       );
 
-
-  factory Status.fromJson(Map<String, dynamic> json) =>
-      _$StatusFromJson(json);
+  factory Status.fromJson(Map<String, dynamic> json) => _$StatusFromJson(json);
 
   Map<String, dynamic> toJson() => _$StatusToJson(this);
 }
@@ -360,8 +349,7 @@ class Share {
         shareUrl: shareUrl ?? this.shareUrl,
       );
 
-  factory Share.fromJson(Map<String, dynamic> json) =>
-      _$ShareFromJson(json);
+  factory Share.fromJson(Map<String, dynamic> json) => _$ShareFromJson(json);
 
   Map<String, dynamic> toJson() => _$ShareToJson(this);
 }
@@ -408,7 +396,6 @@ class ListStats {
       _$ListStatsFromJson(json);
 
   Map<String, dynamic> toJson() => _$ListStatsToJson(this);
-
 }
 
 @JsonSerializable()
@@ -474,8 +461,7 @@ class Meta {
         previousPage: previousPage ?? this.previousPage,
       );
 
-  factory Meta.fromJson(Map<String, dynamic> json) =>
-      _$MetaFromJson(json);
+  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
 
   Map<String, dynamic> toJson() => _$MetaToJson(this);
 }

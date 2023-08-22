@@ -74,7 +74,7 @@ class _FavoriteItemsPageState extends State<FavoriteItemsPage> {
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
                   height: 50,
-                  child:  Container(
+                  child: Container(
                     color: Colors.white,
                     child: Card(
                       child: ListTile(
@@ -82,8 +82,7 @@ class _FavoriteItemsPageState extends State<FavoriteItemsPage> {
                         title: TextField(
                           controller: controller,
                           decoration: const InputDecoration(
-                              hintText: 'Search',
-                              border: InputBorder.none),
+                              hintText: 'Search', border: InputBorder.none),
                           onChanged: onSearchTextChanged,
                         ),
                         trailing: Icon(Icons.search),
@@ -177,10 +176,12 @@ class _FavoriteItemsPageState extends State<FavoriteItemsPage> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               const Text('Name: '),
-                              Text('${listElement.owner!.name} ',
+                              Text(
+                                '${listElement.owner!.name} ',
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
-                                textAlign: TextAlign.justify,),
+                                textAlign: TextAlign.justify,
+                              ),
                               SizedBox(
                                 width: 70,
                               ),
@@ -202,10 +203,13 @@ class _FavoriteItemsPageState extends State<FavoriteItemsPage> {
                               Text('Share Source: '),
                             ],
                           ),
-                          Text('${listElement.share!.shareSource} ',   maxLines: 2,
+                          Text(
+                            '${listElement.share!.shareSource} ',
+                            maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             textDirection: TextDirection.rtl,
-                            textAlign: TextAlign.justify,),
+                            textAlign: TextAlign.justify,
+                          ),
                         ],
                       )
                       // Container(

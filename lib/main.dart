@@ -7,7 +7,7 @@ import 'controllers/home_page_controller.dart';
 
 void main() {
   Get.put(HomePageController());
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 // class MyApp extends StatelessWidget {
@@ -34,7 +34,6 @@ void main() {
 //   }
 // }
 
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -48,4 +47,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

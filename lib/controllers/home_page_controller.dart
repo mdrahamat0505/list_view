@@ -35,20 +35,17 @@ class HomePageController extends GetxController with ApiService {
       // if (movie != null) {
       //   moviesList.value.addAll(movie as List<Movie>);
       // }
-    } catch (e) {
-
-    }
+    } catch (e) {}
     // TODO: implement onReady
     super.onReady();
   }
 
   void getUserList() async {
-
     isList.value = true;
     try {
       // final url = Uri.parse(Constants.baseUrl);
       final response = await dio.get(Constants.url);
-     // final res = await hh.get(url);
+      // final res = await hh.get(url);
 
       if (response.statusCode == 200) {
         try {
@@ -57,7 +54,6 @@ class HomePageController extends GetxController with ApiService {
           isList.value = false;
 
           if (responseJson != null) {
-
             try {
               UserData userData = UserData.fromJson(responseJson);
               listElement.clear();
